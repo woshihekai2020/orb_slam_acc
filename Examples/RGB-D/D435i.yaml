@@ -1,0 +1,59 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 610.973 #602.316 #
+Camera.fy: 610.508 #603.647 #
+Camera.cx: 326.195 #328.845 #
+Camera.cy: 242.118 #238.337 #
+
+Camera.k1: 0.13200119
+Camera.k2: -0.27231803
+Camera.p1: 0.00148674
+Camera.p2: -0.00158623
+
+# Camera frames per second 
+Camera.fps: 30.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#---------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize:2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+#add hekai.20210803.
+PointCloudMapping.Resolution: 0.03
+meank: 50
+threash: 2.0
