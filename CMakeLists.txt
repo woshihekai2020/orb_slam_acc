@@ -7,6 +7,9 @@ ENDIF()
 
 MESSAGE("Build type: " ${CMAKE_BUILD_TYPE})
 
+file(GLOB_RECURSE OLD_OPENCV "/usr/lib/x86_64-linux-gnu/libopencv*")
+list(REMOVE_ITEM catkin_LIBRARIES ${OLD_OPENCV})
+
 #set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}  -Wall  -O3 -march=native ")
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall   -O3 -march=native")
 set(CMAKE_C_FLAGS_DEBUG "-O2 -g")
@@ -44,7 +47,7 @@ endif()
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
 set(OpenCV_DIR "~/dep/SLAM_dep/opencv3/build/") #add hekai
-find_package(OpenCV QUIET)
+find_package(OpenCV 3.4.11 REQUIRED NO_DEFAULT_PATH)
 if(NOT OpenCV_FOUND)
    find_package(OpenCV QUIET)
    if(NOT OpenCV_FOUND)
