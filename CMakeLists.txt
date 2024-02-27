@@ -46,7 +46,7 @@ endif()
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
-set(OpenCV_DIR "~/dep/SLAM_dep/opencv3/build/") #add hekai
+set(OpenCV_DIR /usr/local/share/OpenCV"") #add hekai
 find_package(OpenCV 3.4.11 REQUIRED NO_DEFAULT_PATH)
 if(NOT OpenCV_FOUND)
    find_package(OpenCV QUIET)
